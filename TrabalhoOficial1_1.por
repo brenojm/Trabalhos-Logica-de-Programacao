@@ -17,9 +17,11 @@ programa
     		    escreva("\nLinha e coluna desejada: \n")
 		    leia(linha,coluna)
 		    limpa()
-		    se(linha > 9 ou coluna > 11){
-			    escreva("Poltrona inválida\n\n")
-	    	    }senao se(linha >= 0 e coluna >= 0 e sala[linha][coluna] == 1){
+		    enquanto(linha > 9 ou coluna > 11){
+			    escreva("Poltrona inválida, escolha outra:")
+			    leia(linha,coluna)
+	    	    }
+	    	    se(linha >= 0 e coluna >= 0 e sala[linha][coluna] == 1){
 			    escreva("Poltrona já reservada, escolha outra:\n\n")
 		    }
     		    se (linha >= 0 e coluna >= 0 e sala[linha][coluna] != 1){
@@ -29,12 +31,11 @@ programa
 			    }
 	    }enquanto(linha >= 0 e coluna >= 0)
 	    se(reserva == 0){
-	      escreva("Você não reservou nenhuma poltrona!")
-	    }senao
-	    	 se(reserva == 1){
+	      	 escreva("Você não reservou nenhuma poltrona!")
+	    }senao se(reserva == 1){
 	    	 	 escreva("Você reservou uma poltrona!")
 	    	 }senao{
-	    	 	 escreva("Você reservou ",reserva," poltronas!")
+	    	 	 escreva("Você reservou ",reserva," poltronas.")
 	    	 }
     }
 }
@@ -43,7 +44,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1166; 
+ * @POSICAO-CURSOR = 588; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
